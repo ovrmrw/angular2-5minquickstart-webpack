@@ -10,17 +10,17 @@ module.exports = [
       extensions: ['', '.ts', '.js']
     },
     plugins: [
-      new webpack.optimize.UglifyJsPlugin() // minify
+      new webpack.optimize.UglifyJsPlugin() // minify enabled
     ],
     module: {
       loaders: [
         {
           test: /\.ts$/,
           exclude: [/node_modules/],
-          loader: 'babel-loader!ts-loader' // first ts-loader(with tsconfig.json), second babel-loader(with .babelrc)        
+          loader: 'babel-loader!ts-loader' // first ts-loader(with tsconfig.json), second babel-loader        
         }
       ]
     },
-    devtool: 'source-map',
+    devtool: 'source-map', // output source map
   }
 ]

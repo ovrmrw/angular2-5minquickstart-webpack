@@ -6,6 +6,7 @@ const builder = new Builder('.', 'system.config.js');
 
 console.log('Build start');
 
+// minify enabled & output source map
 builder
   .buildStatic('app/main.js', 'bundles/system.bundle.js', { minify: true, sourceMaps: true })
   .then(function () {
