@@ -6,15 +6,11 @@ System.config({
   // babel6ではなく5を使うことに注意してください。
   transpiler: 'babel',
   map: {
-    app: "app", // System.import('app')と書いたらsrcフォルダを参照するという意味。
+    app: "app", // System.import('app')と書いたらappフォルダを参照するという意味。
 
     // 下記数行はpackagesの記述とセットで書くことでangular2,rxjsのモジュールを動的にロードできます。
     //'angular2': 'node_modules/angular2',
-    '@angular/core': 'node_modules/@angular/core',
-    '@angular/common': 'node_modules/@angular/common',
-    '@angular/compiler': 'node_modules/@angular/compiler',
-    '@angular/platform-browser': 'node_modules/@angular/platform-browser',
-    '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic',
+    '@angular': 'node_modules/@angular',
     'rxjs': 'node_modules/rxjs',
     'zone.js': 'node_modules/zone.js',
   },
@@ -30,7 +26,7 @@ System.config({
     // mapでフォルダを指定した場合はこれをセットで書かないとangular2,rxjsのモジュールを動的にロードできません。
     //angular2: {},
     '@angular/core': {
-      main: 'index'
+      main: 'index' // import '@angular/core';と書いたら node_modules/@angular/core/index.js を参照するという意味。
     },
     '@angular/common': {
       main: 'index'
