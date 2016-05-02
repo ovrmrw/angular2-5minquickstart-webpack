@@ -1,10 +1,10 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'my-app2',
   template: `
     <ul>
-      <li *ngFor="#text of texts">{{text}}</li>
+      <li *ngFor="let text of texts">{{text}}</li>
     </ul>
   `
 })

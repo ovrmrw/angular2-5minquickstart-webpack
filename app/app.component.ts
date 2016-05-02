@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {AppComponent2} from './app2.component'; // async/await sample.
 
 @Component({
