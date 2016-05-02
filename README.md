@@ -14,7 +14,7 @@ npm install
 
 2: Build JS files.
 ```
-webpack
+npm run build
 ```
 
 3: Run.

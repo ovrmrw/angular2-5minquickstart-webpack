@@ -2,15 +2,15 @@ const webpack = require("webpack");
 
 module.exports = [
   {
-    entry: ['./app/initialize.ts', './app/main.ts'],
+    entry: ['./app/main.ts'],
     output: {
-      filename: './bundles/bundle.js'
+      filename: './bundles/webpack.bundle.js'
     },
     resolve: {
       extensions: ['', '.ts', '.js']
     },
     plugins: [
-      
+      new webpack.optimize.UglifyJsPlugin() // minify
     ],
     module: {
       loaders: [
@@ -20,6 +20,7 @@ module.exports = [
           loader: 'babel-loader!ts-loader' // first ts-loader(with tsconfig.json), second babel-loader(with .babelrc)        
         }
       ]
-    }
+    },
+    devtool: 'source-map',
   }
 ]
