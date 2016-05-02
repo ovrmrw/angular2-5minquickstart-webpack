@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 
 @Component({
   selector: 'my-app2',
@@ -8,10 +8,10 @@ import {Component} from 'angular2/core';
     </ul>
   `
 })
-export class AppComponent2 {
+export class AppComponent2 implements OnInit {
   texts: string[] = [];
 
-  constructor() {
+  ngOnInit() {
     (async () => {
       this.texts.push('start async');
 
