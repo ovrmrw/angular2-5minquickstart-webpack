@@ -12,6 +12,7 @@ System.config({
     //'angular2': 'node_modules/angular2',
     '@angular': 'node_modules/@angular',
     'rxjs': 'node_modules/rxjs',
+    'symbol-observable': 'node_modules/symbol-observable',
     // 'zone.js': 'node_modules/zone.js',
   },
 
@@ -40,6 +41,9 @@ System.config({
       main: 'index'
     },
     rxjs: {},
+    'symbol-observable':  {
+      main: 'index'
+    },
     // 'zone.js': {}
   }
 });
